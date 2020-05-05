@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        {{ filter.form.as_p }}
+        <input type="submit" />
+    </form>
+    {% for obj in filter.qs %}
+    <li>{{ obj.title }}</li>
+    <li>{{ obj.location }}</li>
+    <li>{{obj.company}}</li>
+    <li>{{obj.company_url}}</li>
+    <li>{{obj.type}}</li>
+    <li>{{obj.description}}</li><br />
+    {% endfor %}
+
+</body>
+</html>
